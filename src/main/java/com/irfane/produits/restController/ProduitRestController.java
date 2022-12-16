@@ -40,6 +40,7 @@ public class ProduitRestController {
     @RequestMapping(value="/prodscat/{idCat}",method = RequestMethod.GET)//retourne tous les produits d'une categorie donnée
     public List<Produit> getProduitsByCatId(@PathVariable("idCat") Long idCat) {
         return produitService.findByCategorieIdCat(idCat);
+
     }
 
 }
