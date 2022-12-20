@@ -35,7 +35,7 @@ public class ProduitRestController {
     @RequestMapping(value="/{id}",method = RequestMethod.DELETE) // pour supprimer un produit
     public void deleteProduit(@PathVariable("id") Long id)
     {
-        produitService.deleteProduitById(id);
+            produitService.deleteProduitById(id);
     }
     @RequestMapping(value="/prodscat/{idCat}",method = RequestMethod.GET)//retourne tous les produits d'une categorie donnée
     public List<Produit> getProduitsByCatId(@PathVariable("idCat") Long idCat) {

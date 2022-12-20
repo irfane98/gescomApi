@@ -1,5 +1,6 @@
 package com.irfane.produits;
 
+import com.irfane.produits.entities.Categorie;
 import com.irfane.produits.entities.Produit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -18,7 +19,7 @@ public class ProduitsApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		repositoryRestConfiguration.exposeIdsFor(Produit.class);
+		repositoryRestConfiguration.exposeIdsFor(Produit.class, Categorie.class);
 	}
 
 }
